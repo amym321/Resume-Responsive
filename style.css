@@ -61,7 +61,8 @@ section {
     font-weight: 500;
     color: #5d6369;
 
-    margin-top: -5px;              /*****  USE THIS???  *****/
+    margin-top: -5px;              
+    /*****  USE THIS???  *****/
 }
 
 /* Item Properties */
@@ -84,18 +85,6 @@ section {
     text-align: right;
 }
 
-/* Bulleted List Properties */
-.list {
-  display: flex;
-  flex-direction: column;
-}
-.list-item {
-  margin-left: 10px;
-}
-.indent {
-  display: inline-block;
-  margin: 0 0 0 10px;
-}
 
 /* Colors */
 .red {
@@ -209,6 +198,7 @@ section {
 }
 
 /* Education ------------------------------------------------ */
+
 /* Skills --------------------------------------------------- */
 .skill-icons {
   display: flex;
@@ -235,6 +225,7 @@ section {
 }
 
 /* Volunteer ------------------------------------------------ */
+
 /* Resume PDF--------------------------------------------------- */
 .resume-icon {
     margin-left: 40px; 
@@ -339,7 +330,7 @@ section {
     .circle { font-size: 3rem; }
     .social-icon { font-size: 1.75rem; }
     /* Experience ---------------------------------------- */
-    /* .experience-content-top { top: 6vh; } */
+    .experience-content-top { top: 6vh; }
     .item-wrapper { display: block; }
     .item { width: 100%; }
     .item-right { width: 100%; }
