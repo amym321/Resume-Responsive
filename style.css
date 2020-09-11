@@ -15,6 +15,17 @@ ul {
 section {
     min-height: 100vh;
     margin-left: 20%;
+
+    background-image: url(img/code-background9.jpg); 
+    /* background-position-x: right; */
+    /* background-position: center;  */
+    background-position: 65% 50%;
+    background-attachment: fixed;
+    background-size: 55%;
+    /* position:relative; */
+
+    /* Do not repeat the image, redundant to fixed */
+    background-repeat: no-repeat;   
 }
 .content-top {
     top: 28vh;
@@ -27,7 +38,8 @@ section {
 /* Font Properties */
 .main {
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.5rem;
+    font-size: 1.25rem;
+    /* line-height: 1.5rem; */
     color: #5d6369;
 }
 .title {
@@ -40,12 +52,14 @@ section {
     font-size: 4rem;
 }
 .item-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;          /* was 1.8 */
 }
 .item-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.8rem;          /* was 1.4 */
     font-weight: 500;
     color: #5d6369;
+
+    margin-top: -5px;              /*****  USE THIS???  *****/
 }
 
 /* Item Properties */
@@ -102,22 +116,24 @@ section {
 
 /* Navigation ----------------------------------------------- */
 .nav {
-    width: 18%;
-    height: 100%;
-    background-color: #000000;          /*  was #000000  */
-    position: fixed; 
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    position: fixed; 
+    background-color: #000000; 
+    width: 18%;
+    height: 100%;   
 }
 .nav a {
-    color: #777777;
-    font-family: 'Segoe UI', sans-serif;
-    text-transform: uppercase;
     display: block;
     padding: 10px;
-    margin-right: 40px;
+    margin-right: 95px;                      /* centers under name.  was 40  */ 
+    color: #777777;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;                      
+    /* text-align: center; */
 }
 .nav a:hover {
     color: rgb(228, 228, 228);
@@ -125,13 +141,29 @@ section {
 .nav a:active, .nav a:focus-within {
     color: #ffffff;
 }
+
+*, ::after, ::before {                          /*** IMAGE    ***/ 
+    box-sizing: border-box;
+}
+
+/* a .rounded-img {
+      left: 50%;
+    transform: translate(-2%, 0);  
+} */
 .rounded-img {
     border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     border: .5rem solid#294e70;
-    /* border: .5rem solid rgba(255,255,255,.2); */
+    
+    /* justify-content: center; */
+
+    /* left: 50%;
+    transform: translate(-50%, -50%); */
 }
+
+
+
 .nav-title {
     display: none;
 }
@@ -197,22 +229,20 @@ section {
   margin-left: 75px;
 }
 .no-margin-left {
-    margin-left: -3vw;          /* was -1 */
+    /** vw is less responsive than px. If using vh,  -1vw is good for fontawesome and -4vw is good for iconify **/
+    margin-left: -40px;
 }
 .skill-icon {
     font-size: 3.5rem;
     position: absolute;
     top: 50%;
     left: 55%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);       /*****  affects bootstrap, but not iconify ******/
 }
-/* #diamond {
-    font-size: 3rem;
-} */
 
-/* Interests ------------------------------------------------ */
-/* Resume --------------------------------------------------- */
-.margin {
+/* Volunteer ------------------------------------------------ */
+/* Resume PDF--------------------------------------------------- */
+.marginPDF {
     margin-left: 40px;
 }
 
@@ -231,7 +261,12 @@ section {
   }
 /* Navigation Collapse */
 @media screen and (max-width: 1080px) {
-    section { margin-left: 0; }
+    section { 
+        margin-left: 0; 
+
+        background-position: 45% 55%;                       /*  added  */
+        background-size: 90%;                               /*  added  */
+    }
     .content-padding { padding: 0 1rem; }
     /* Navigation ----------------------------------- */
     .navbar-background {
@@ -263,8 +298,13 @@ section {
         top: 0;
         transition: 0.3s ease;
     }
+        /* .nav ul {
+        margin-left: -90px;           
+    } */
     .nav a {
         padding: 5px;
+
+        /* margin-right: 5px; */
     }
     .display-picture {
         display: none;
@@ -274,11 +314,14 @@ section {
         font-size: 32px;
         display: initial;
         position: absolute;
-        left: 43%; 
+
+        left: 33%;                          /* ? */
     }
 }
 /* iPad Pro */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .nav-title { left: 43%; }                               /*  ? */
+
     .rounded-img { height: 8rem; width: 8rem; }
 }
 
@@ -294,6 +337,10 @@ section {
     /* About --------------------------------------------- */
     .about-content-top { top: 22vh; }
     .main-title { line-height: 6rem; }
+
+    .social-icons { left: -40px; }                   /* added */
+    .social-icons .icons { margin-left: 15px; }       /* added */
+
     .circle { font-size: 3rem; }
     .social-icon { font-size: 1.75rem; }
     /* Experience ---------------------------------------- */
@@ -303,17 +350,20 @@ section {
     .item-right { width: 100%; }
     .align { text-align: left; }
     /* Skills -------------------------------------------- */
-    .skill-icons { margin-left: -77px; }
+    /*** .skill-icons - use -77px if using fontawesome icons ***/
+    .skill-icons { margin-left: -108px; }                            
     .icons { margin-left: 60px; }
     .skill-icon { font-size: 3rem; }
-    #diamond { font-size: 2.5rem; }
     /* Awards -------------------------------------------- */
     .line-height { line-height: 4rem; margin-bottom: 4vh; }
 }
 
 /* iPhone X */
 @media screen and (max-width: 400px) {
-    .social-icons .icons { margin-left: 12px; }
+    .social-icons .icons { 
+        margin-left: 10px;
+        /* transform: translate(-50%,0); */
+     }
     .small-text { font-size: .9rem; }
 }
 
@@ -327,7 +377,7 @@ section {
     .nav-title { left: 28%; }
     .smaller-text { font-size: .8rem; }
     /* About -------------------------*/
-    .about-content-top { top: 12vh; }
+    .about-content-top { top: 15vh; }
     .main-title { font-size: 6rem; line-height: 5rem; }
     .sub-title { font-size: 1.4rem; }
     .circle { font-size: 2.5rem; }
@@ -335,5 +385,4 @@ section {
     /* Skills -----------------------*/
     .icons { margin-left: 50px; }
     .skill-icon { font-size: 2.5rem; }
-    #diamond { font-size: 2rem; }    
 }
