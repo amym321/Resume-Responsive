@@ -4,6 +4,11 @@
 html, body {
     margin: 0;
     scroll-behavior: smooth;
+    background-image: url(img/code-background9.jpg); 
+    background-position: 65% 50%;
+    background-attachment: fixed;
+    background-size: 55%;
+    background-repeat: no-repeat;   
 }
 a {
     text-decoration: none;
@@ -16,11 +21,11 @@ ul {
 section {
     min-height: 100vh;
     margin-left: 20%;
-    background-image: url(img/code-background9.jpg); 
+    /* background-image: url(img/code-background9.jpg); 
     background-position: 65% 50%;
     background-attachment: fixed;
     background-size: 55%;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;    */
 }
 .content-top {
     /* reduced from 25vh */
@@ -134,8 +139,9 @@ section {
 }
 .nav-title {
     display: none;
-
+    background: linear-gradient(#eee, #D30000);
     background: -webkit-linear-gradient(#eee, #D30000);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -154,7 +160,9 @@ section {
     line-height: 7rem;
     margin: 0;
 
+    background: linear-gradient(#D30000, black);
     background: -webkit-linear-gradient(#D30000, black);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -298,31 +306,31 @@ section {
 }
 /* iPad Pro */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    .nav-title { 
-        /* left: 43%;  */
-        /* display: flex;
-        justify-content: center; */
-    }                             
+    /* .nav-title { 
+        left: 43%; 
+        display: flex;
+        justify-content: center;
+    }                              */
     .rounded-img { height: 7rem; width: 7rem; }
 }
 
 /* iPad */
 @media screen and (min-width: 650px) and (max-width: 768px) {
-    .nav-title { 
-        /* left: 40%;  */        
-        /* display: flex;
-        justify-content: center; */
-        }
+    /* .nav-title { 
+        left: 40%;         
+        display: flex;
+        justify-content: center;
+        } */
 }
 
 /* Large Mobile */
 @media screen and (max-width: 600px) {
     /* was 32% */
-    .nav-title { 
-        /* left: 37%;  */
-        /* display: flex;
-        justify-content: center; */
-    }                       
+    /* .nav-title { 
+        left: 37%; 
+        display: flex;
+        justify-content: center;
+    }                        */
     .content-top { top: 12vh; }
     /* About --------------------------------------------- */
     .about-content-top { top: 22vh; }
