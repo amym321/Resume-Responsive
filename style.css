@@ -6,8 +6,6 @@ html, body {
 }
 a {
     text-decoration: none;
-    /* margin-right: 40px;                */
-      /* added */
 }
 ul {
     list-style: none;
@@ -17,20 +15,15 @@ ul {
 section {
     min-height: 100vh;
     margin-left: 20%;
-
     background-image: url(img/code-background8.jpg); 
-    /* background-position-x: right; */
-    /* background-position: center;  */
     background-position: 65% 50%;
     background-attachment: fixed;
     background-size: 55%;
-    /* position:relative; */
-
-    /* Do not repeat the image, redundant to fixed */
     background-repeat: no-repeat;   
 }
 .content-top {
-    top: 25vh;
+    /* reduced from 25vh */
+    top: 10vh;
 }
 .content-padding {
     position: relative;
@@ -41,7 +34,6 @@ section {
 .main {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.25rem;
-    /* line-height: 1.5rem; */
     color: #5d6369;
 }
 .title {
@@ -62,7 +54,6 @@ section {
     color: #5d6369;
 
     margin-top: -5px;              
-    /*****  USE THIS???  *****/
 }
 
 /* Item Properties */
@@ -98,8 +89,9 @@ section {
     /* color: rgba(133, 0, 119);     */
     /*  133, 0, 119 */
     /* color: #990047;             */
-    color: #990000; 
-    /*  rgb 153, 0, 0 */
+    /* color: #990000;  */
+    /*  color: rgb(153, 0, 0) */
+    color: #e70202;
 }
 .grey {
     color: #5d6369;        
@@ -136,18 +128,9 @@ section {
     width: 8rem;
     height: 8rem;
     border: .25rem solid#294e70;
-    
-    /* justify-content: center; */
-
-    /* left: 50%;
-    transform: translate(-50%, -50%); */
 }
-
-
-
 .nav-title {
     display: none;
-    /* text-align: center; */
 }
 .menu-bars .fa {
     display: none;
@@ -155,7 +138,8 @@ section {
 
 /* About ---------------------------------------------------- */
 .about-content-top {
-    top: 25.5vh;
+    /* reduced from 25.5vh */ 
+    top: 20vh;
 }
 .main-title {
     font-size: 7rem;
@@ -193,17 +177,17 @@ section {
     transform: translate(-50%, -50%);
 }
 /* Experience ----------------------------------------------- */
-.experience-content-top {
+/* .experience-content-top {
     top: 3vh;
-}
+} */
 
 /* Education ------------------------------------------------ */
 
 /* Skills --------------------------------------------------- */
 .skill-icons {
   display: flex;
+  /* increased from 3vh */
   margin-top: 5vh;
-  /* margin-bottom: 3vh; */
 }
 .icons {
   display: block;
@@ -214,14 +198,14 @@ section {
 .skill-icon-margin {
     /** vw is less responsive than px. If using vw, -1vw is good for fontawesome and -4vw is good for iconify **/
     margin-left: -40px;
-    /* margin-left: -4vw; */
 }
 .skill-icon {
     font-size: 3.5rem;
     position: absolute;
     top: 50%;
     left: 55%;
-    transform: translate(-50%, -50%);       /*****  affects bootstrap, but not iconify ******/
+    /*****  affects bootstrap, but not iconify ******/
+    transform: translate(-50%, -50%);       
 }
 
 /* Volunteer ------------------------------------------------ */
@@ -249,9 +233,9 @@ section {
 @media screen and (max-width: 1080px) {
     section { 
         margin-left: 0; 
-
-        background-position: 45% 55%;                       /*  added  */
-        background-size: 90%;                               /*  added  */
+        /*  added  */
+        background-position: 45% 55%;                      
+        background-size: 90%;                               
     }
     .content-padding { padding: 0 1rem; }
     /* Navigation ----------------------------------- */
@@ -284,13 +268,8 @@ section {
         top: 0;
         transition: 0.3s ease;
     }
-        /* .nav ul {
-        margin-left: -90px;           
-    } */
     .nav a {
         padding: 5px;
-
-        /* margin-right: 5px; */
     }
     .display-picture {
         display: none;
@@ -300,14 +279,13 @@ section {
         font-size: 32px;
         display: initial;
         position: absolute;
-        /* text-align: center; */
-        /* ? */
+
         left: 42%;                          
     }
 }
 /* iPad Pro */
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    .nav-title { left: 43%; }                               /*  ? */
+    .nav-title { left: 43%; }                             
     .rounded-img { height: 7rem; width: 7rem; }
 }
 
@@ -336,7 +314,7 @@ section {
     .item-right { width: 100%; }
     .align { text-align: left; }
     /* Skills -------------------------------------------- */
-    /*** .skill-icons - use -77px if using fontawesome icons ***/
+    /*** .skill-icons - use margin-left: -77px if using fontawesome icons ***/
     .skill-icons { margin-left: -108px; }                            
     .icons { margin-left: 60px; }
     .skill-icon { font-size: 3rem; }
@@ -349,7 +327,6 @@ section {
 @media screen and (max-width: 400px) {
     .social-icons .icons { 
         margin-left: 10px;
-        /* transform: translate(-50%,0); */
      }
     .small-text { font-size: .9rem; }
 }
