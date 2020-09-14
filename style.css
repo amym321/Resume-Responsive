@@ -4,6 +4,12 @@
 html, body {
     margin: 0;
     scroll-behavior: smooth;
+
+    background-image: url(/img/code-background9.jpg); 
+    background-position: 65% 50%;
+    background-attachment: fixed;
+    background-size: 55%;
+    background-repeat: no-repeat;   
 }
 a {
     text-decoration: none;
@@ -27,7 +33,7 @@ section {
 }
 
 /* Background Properties */
-.background {
+/* .background {
     background-image: url(img/code-background9.jpg); 
     background-position: 65% 50%;
     background-attachment: fixed;
@@ -38,7 +44,7 @@ section {
     height: 100vh;
     top: 0;
     left: 0;
-}
+} */
 
 /* Font Properties */
 .main {
@@ -300,7 +306,7 @@ section {
     }
     .nav-title {
         font-size: 32px;
-        display: initial;
+        /* display: initial; */
         /* position: absolute; */
 
         justify-content: center;
