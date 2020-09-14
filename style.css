@@ -5,7 +5,7 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
 
-    background-image: url(img/code-background9.jpg); 
+    background-image: url(./img/code-background9.jpg); 
     background-position: 65% 50%;
     background-attachment: fixed;
     background-size: 55%;
