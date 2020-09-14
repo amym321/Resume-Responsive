@@ -149,11 +149,11 @@ section {
 }
 .nav-title {
     display: none;
-    /* background: linear-gradient(#eee, #D30000);
+    background: linear-gradient(#eee, #D30000);
     background: -webkit-linear-gradient(#eee, #D30000);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-text-fill-color: transparent;
 }
 .menu-bars .fa {
     display: none;
@@ -170,12 +170,22 @@ section {
     line-height: 7rem;
     margin: 0;
 
-    /* background: linear-gradient(#D30000, black);
+    background: linear-gradient(#D30000, black);
     background: -webkit-linear-gradient(#D30000, black);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-
+    -webkit-text-fill-color: transparent;
+}
+.sub-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #5d6369;
+    line-height: 2rem;
+    margin: 0;
+}
+.social-icons {
+    display: flex;
+    position: absolute;
     margin-top: 3vh;
     left: -40px;
 }
